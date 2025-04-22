@@ -40,6 +40,11 @@ export class Cache {
     }
   }
 
+  async clearAll() {
+    await this.db.prepare(`DELETE FROM cache`).run()
+    logger.success("已清空所有缓存")
+  }
+
   async getEntire(keys: string[]): Promise<CacheInfo[]> {
     const keysStr = keys.map(k => `id = '${k}'`).join(" or ")
     const res = await this.db.prepare(`SELECT id, data, updated FROM cache WHERE ${keysStr}`).all() as any

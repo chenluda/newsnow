@@ -134,11 +134,48 @@
     "interval": 600000
   },
   "ithome": {
+    "redirect": "ithome-all",
     "name": "IT之家",
     "type": "realtime",
     "column": "tech",
     "home": "https://www.ithome.com",
     "color": "red",
+    "interval": 600000,
+    "title": "全部"
+  },
+  "ithome-all": {
+    "name": "IT之家",
+    "type": "realtime",
+    "column": "tech",
+    "home": "https://www.ithome.com",
+    "color": "red",
+    "interval": 600000,
+    "title": "全部"
+  },
+  "ithome-ai": {
+    "name": "IT之家",
+    "type": "realtime",
+    "column": "tech",
+    "home": "https://www.ithome.com",
+    "color": "red",
+    "interval": 600000,
+    "title": "智能时代"
+  },
+  "ithome-it": {
+    "name": "IT之家",
+    "type": "realtime",
+    "column": "tech",
+    "home": "https://www.ithome.com",
+    "color": "red",
+    "interval": 600000,
+    "title": "IT资讯"
+  },
+  "aibase": {
+    "name": "AiBase",
+    "type": "realtime",
+    "column": "tech",
+    "home": "https://www.aibase.com/zh/news",
+    "color": "blue",
     "interval": 600000
   },
   "thepaper": {

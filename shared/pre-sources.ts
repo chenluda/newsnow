@@ -126,6 +126,24 @@ export const originSources = {
     column: "tech",
     type: "realtime",
     home: "https://www.ithome.com",
+    sub: {
+      all: {
+        title: "全部",
+      },
+      ai: {
+        title: "智能时代",
+      },
+      it: {
+        title: "IT资讯",
+      },
+    },
+  },
+  "aibase": {
+    name: "AiBase",
+    color: "blue",
+    column: "tech",
+    type: "realtime",
+    home: "https://www.aibase.com/zh/news",
   },
   "thepaper": {
     name: "澎湃新闻",
