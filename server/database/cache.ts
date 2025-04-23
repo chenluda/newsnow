@@ -82,6 +82,7 @@ export async function getCacheTable() {
     // logger.info("db: ", db.getInstance())
     if (process.env.ENABLE_CACHE === "false") return
     const cacheTable = new Cache(db)
+    // await cacheTable.clearAll()
     if (process.env.INIT_TABLE !== "false") await cacheTable.init()
     return cacheTable
   } catch (e) {
