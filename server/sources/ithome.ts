@@ -42,14 +42,15 @@ const smartEraNews=defineSource(async () => {
       item=$(item);
       return {
         title: item.text(),
-        link: item.attr('href'),
+        url: item.attr('href'),
+        id: item.attr('href'),
       };
     })
     .get();
 
   const items=await Promise.all(
     list.map(async (item) => {
-      const res=await myFetch(item.link);
+      const res=await myFetch(item.url);
       const content=cheerio.load(res);
       const post=content('#paragraph');
       post.find('img[data-original]').each((_,ele) => {
@@ -78,14 +79,15 @@ const itNews=defineSource(async () => {
       item=$(item);
       return {
         title: item.text(),
-        link: item.attr('href'),
+        url: item.attr('href'),
+        id: item.attr('href'),
       };
     })
     .get();
 
   const items=await Promise.all(
     list.map(async (item) => {
-      const res=await myFetch(item.link);
+      const res=await myFetch(item.url);
       const content=cheerio.load(res);
       const post=content('#paragraph');
       post.find('img[data-original]').each((_,ele) => {
