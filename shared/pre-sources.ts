@@ -102,8 +102,11 @@ export const originSources = {
   },
   "hupu": {
     name: "虎扑",
-    disable: true,
     home: "https://hupu.com",
+    column: "china",
+    title: "主干道热帖",
+    type: "hottest",
+    color: "red",
   },
   "tieba": {
     name: "百度贴吧",
@@ -157,8 +160,6 @@ export const originSources = {
   "sputniknewscn": {
     name: "卫星通讯社",
     color: "orange",
-    // cloudflare pages cannot access
-    disable: "cf",
     column: "world",
     home: "https://sputniknews.cn",
   },
@@ -358,7 +359,6 @@ export const originSources = {
     name: "果核剥壳",
     column: "china",
     color: "yellow",
-    disable: "cf",
     home: "https://www.ghxi.com/",
   },
   "smzdm": {
@@ -396,6 +396,25 @@ export const originSources = {
     type: "hottest",
     title: "热点资讯",
     home: "https://www.ifeng.com",
+  },
+  "chongbuluo": {
+    name: "虫部落",
+    column: "china",
+    color: "green",
+    home: "https://www.chongbuluo.com",
+    sub: {
+      latest: {
+        title: "最新",
+        interval: Time.Common,
+        home: "https://www.chongbuluo.com/forum.php?mod=guide&view=newthread",
+      },
+      hot: {
+        title: "最热",
+        type: "hottest",
+        interval: Time.Common,
+        home: "https://www.chongbuluo.com/forum.php?mod=guide&view=hot",
+      },
+    },
   },
 } as const satisfies Record<string, OriginSource>
 
