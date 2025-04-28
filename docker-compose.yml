@@ -1,7 +1,7 @@
 services:
   newsnow:
     # image: registry.cn-wulanchabu.aliyuncs.com/zhihu2web/newsnow:20250423
-    image: glenn/newsnow:20250425
+    image: glenn/newsnow:20250428
     container_name: newsnow
     restart: always
     ports:
